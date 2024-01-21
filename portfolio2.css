@@ -98,9 +98,15 @@ section {
 }
  .home-content-main{
     display: flex;
+    width: 100%;
     flex-wrap: nowrap;
-    gap: 10px;
+    justify-content: space-around;
+    /* gap: 60px; */
     margin-bottom: 20px;  
+ }
+
+ .home-content{
+    width: 40%;
  }
 
 .home-content h3 {
