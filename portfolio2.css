@@ -542,8 +542,6 @@ section{
 @media (max-width:365px){
     .home-img img{
         width: 90vw;
-        margin-right: auto;
-        margin-left: auto;
     }
 
     .about-img img{
