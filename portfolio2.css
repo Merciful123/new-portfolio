@@ -388,6 +388,7 @@ span {
     transition: .5s ease;
 }
 
+
 .footer-iconTop a:hover{
     box-shadow: 0 0 1rem var(--main-color);
 }
@@ -399,6 +400,8 @@ span {
 
 
 /* BREAKPOINTS */
+
+
 @media (max-width:1200px){
     html{
         font-size: 55%;
@@ -518,20 +521,42 @@ section{
     html{
         font-size: 50%;
     }
+
+    .about-img img{
+        width: 95vw;
+    }
+
+    .about{
+        width: 95vw;
+    }
+
+    .home-content{
+         width: 100%;
+    }
     .contact form .input-box input{
         width: 100%;
     }
+
 }
 
 @media (max-width:365px){
     .home-img img{
         width: 90vw;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .about-img img{
-        width: 90vw;
+        width: 95vw;
     }
 
+    .about{
+        width: 95vw;
+    }
+
+    .home-content{
+         width: 100%;
+    }
     .footer{
         flex-direction: column-reverse;
     }
