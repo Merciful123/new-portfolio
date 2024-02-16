@@ -206,6 +206,40 @@
         <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
         <!-- custom js -->
         <script src="portfolio2.js"></script>
+
+        <!-- Visitor details code -->
+        <!-- Add the EmailJS library -->
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+            // Initialize EmailJS with your service ID
+            emailjs.init('service_nkmyb2f');
+
+            // Function to send email
+            function sendEmail() {
+                var visitorData = {
+                    userAgent: navigator.userAgent,
+                    language: navigator.language,
+                    screenSize: {
+                        width: window.screen.width,
+                        height: window.screen.height
+                    },
+                    referringSite: document.referrer,
+                    timestamp: new Date().toISOString()
+                };
+
+                // Send email using EmailJS
+                emailjs.send('service_nkmyb2f', 'template_2t9zoze', visitorData)
+                    .then(function (response) {
+                        console.log('Email sent successfully:', response);
+                    }, function (error) {
+                        console.error('Failed to send email:', error);
+                    });
+            }
+
+            // Call the function to send email when the page loads
+            window.addEventListener('load', sendEmail);
+        </script>
+        <!-- Visitor code end -->
     </body>
 
 </html>
