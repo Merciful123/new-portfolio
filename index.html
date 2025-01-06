@@ -9,7 +9,10 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet" s>
         <!-- custom css -->
         <!-- <link rel="stylesheet" href="/static/css/portfolio2.css"> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/css/uikit.min.css" />
         <link rel="stylesheet" href="portfolio2.css">
+
+        <!-- UIkit CSS -->
     </head>
 
     <body>
@@ -32,11 +35,12 @@
         <section class="home" id="home">
             <div class="home-content-main">
 
-                <div id="home-content" class="home-content">
-                    <h3>Hello, It's Me</h3>
+                <div id="home-content" class="home-content" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+                    <h3>Hello, I am</h3>
                     <h3>Aamir Raza.</h3>
                     <h3>I'm a <span class="multiple-text">Full Stack Developer</span></h3>
-                    <p>Javascript, ReactJs Developer, Python Developer</p>
+                    <p>I have worked in frontend with Javascript, TypeScript, ReactJs and in Backend with Node Js,
+                        Express Js and MongoDB.</p>
 
                     <div class="social-media">
                         <a href="https://www.linkedin.com/in/aamir-raza-59823016a/" target="_blank"><i
@@ -45,31 +49,37 @@
                         <!-- <a href="#"><i class='bx bxl-twitter'></i></a> -->
                         <a href="https://wellfound.com/profile/edit/overview" target="_blank"><i
                                 class='bx bx-link'></i></a>
-                        <a href="https://github.com/Merciful123" target="_blank"><i
-                                class='bx bxl-github'></i>
+                        <a href="https://github.com/Merciful123" target="_blank"><i class='bx bxl-github'></i>
                         </a>
                     </div>
-                    <a href="https://flowcv.com/resume/s66j50ffb"
-                        target="_blank" class="btn">Download CV</a>
+                    <a href="https://flowcv.com/resume/s66j50ffb" target="_blank" class="btn">Download CV</a>
                 </div>
-                <div class="home-img">
+                <div class="home-img" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
                     <img src="home.jpg" alt="">
                 </div>
             </div>
 
             <!-- about section design -->
             <section class="about" id="about">
-                <div class="about-img">
+
+                <div class="about-img"
+                  uk-scrollspy="cls: uk-animation-slide-left; repeat: true"
+                >
                     <img src="about.jpg" alt="">
                 </div>
-                <div class="about-content">
+                <div class="about-content"
+                  uk-scrollspy="cls: uk-animation-slide-right; repeat: true"
+                >
                     <h2 class="heading">About <span>Me</span></h2>
-                    <h3>Frontend Developer</h3>
-                    <p>I am a frontend developer, with passion of learning new technologies.
+                    <h3>Software Engineer</h3>
+                    <p>
 
-                        I have worked as a frontend developer in multiple startups.
-                        I've been learning coding for 3 years.
-                        Learning how things work is my passion.
+                        An adaptive software developer having more than 2 years of
+                        experience with a deep passion for building
+                        impactful products. Enthusiasm lies in problem-solving and utilizing my coding skills to create
+                        innovative solutions. Successfully completed
+                        multiple internships alongside a full-time job,
+                        enhancing my expertise in software development.
                     </p>
 
                     <a href="#" class="btn">Read More</a>
@@ -78,23 +88,33 @@
             </section>
             <!--services section design  -->
             <section class="services" id="services">
-                <h2 class="heading">My <span>Services</span></h2>
+                <h2 class="heading"
+                  uk-scrollspy="cls: uk-animation-slide-top; repeat: true"
+                >My <span>Services</span></h2>
                 <div class="services-container">
 
-                    <div class="services-box">
+                    <div class="services-box"
+                      uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true"
+                    >
                         <i class='bx bx-code-alt'></i>
                         <h3>UI Development</h3>
                         <p>Passionate about creating usually appealing and intuitive UIs.</p>
                         <a href="#" class="btn">Read More </a>
                     </div>
 
-                    <div class="services-box">
+                    <div class="services-box"
+                    
+                      uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true"
+                    >
                         <i class='bx bx-code-alt'></i>
                         <h3>Backend(API) development</h3>
                         <p>Interested in creating fast and performant APIs for clients.</p>
                         <a href="#" class="btn">Read More </a>
                     </div>
-                    <div class="services-box">
+                    <div class="services-box"
+                    
+                      uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true"
+                    >
                         <i class='bx bx-code-alt'></i>
                         <h3>Javascript Development</h3>
                         <p>I create a fully responsive web apps in all devices like mobile, tablet and desktop.</p>
@@ -105,9 +125,15 @@
 
             <!-- portfolio section design!-->
             <section class="portfolio" id="portfolio">
-                <h2 class="heading">Latest<span>Project</span> </h2>
+                <h2 class="heading"
+                
+                      uk-scrollspy="cls: uk-animation-slide-top; repeat: true"
+                >Latest<span>Project</span> </h2>
 
-                <div class="portfolio-container">
+                <div class="portfolio-container"
+                
+                      uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true"
+                >
 
                     <div class="portfolio-box">
                         <img src="portfolio1.jpg" alt="">
@@ -172,10 +198,16 @@
 
         <!-- Contact section design -->
         <section class="contact" id="contact">
-            <h2 class="heading">Contact<span>Me</span>
+            <h2 class="heading"
+            
+                      uk-scrollspy="cls: uk-animation-slide-top; repeat: true"
+            >Contact<span>Me</span>
                 <h2>
 
-                    <form action="#">
+                    <form action="#"
+                    
+                      uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true"
+                    >
                         <div class="input-box">
                             <input type="text" placeholder="Full Name">
                             <input type="email" placeholder="Email Address">
@@ -207,39 +239,10 @@
         <!-- custom js -->
         <script src="portfolio2.js"></script>
 
-        <!-- Visitor details code -->
-        <!-- Add the EmailJS library -->
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        <script>
-            // Initialize EmailJS with your service ID
-            emailjs.init('service_nkmyb2f');
 
-            // Function to send email
-            function sendEmail() {
-                var visitorData = {
-                    userAgent: navigator.userAgent,
-                    language: navigator.language,
-                    screenSize: {
-                        width: window.screen.width,
-                        height: window.screen.height
-                    },
-                    referringSite: document.referrer,
-                    timestamp: new Date().toISOString()
-                };
-
-                // Send email using EmailJS
-                emailjs.send('service_nkmyb2f', 'template_2t9zoze', visitorData)
-                    .then(function (response) {
-                        console.log('Email sent successfully:', response);
-                    }, function (error) {
-                        console.error('Failed to send email:', error);
-                    });
-            }
-
-            // Call the function to send email when the page loads
-            window.addEventListener('load', sendEmail);
-        </script>
-        <!-- Visitor code end -->
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/js/uikit-icons.min.js"></script>
     </body>
 
 </html>

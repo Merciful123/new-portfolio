@@ -176,6 +176,7 @@ span {
     align-items: center;
     gap: 2rem;
     background: var(--second-bg-color);
+    border-radius: 1rem;
 }
 
 .about-img img {
@@ -376,6 +377,11 @@ span {
 
 .footer-text p{
     font-size: 1.6rem;
+    text-align: center;
+}
+
+.footer-text{
+    /* text-align: center; */
 }
 
 .footer-iconTop a{
@@ -564,3 +570,20 @@ section{
         margin-top: 2rem;
     }
 }
+
+
+/* uk-css override */
+.uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, .uk-heading-2xlarge, .uk-heading-3xlarge, .uk-heading-large, .uk-heading-medium, .uk-heading-small, .uk-heading-xlarge, h1, h2, h3, h4, h5, h6{
+    color: white !important;
+}
+
+.uk-link-toggle:hover .uk-link, .uk-link:hover, a:hover{
+    color: unset !important;
+    text-decoration: unset !important;
+}
+
+nav a:hover{
+    color: var(--main-color) !important;
+}
+
+/*  */
