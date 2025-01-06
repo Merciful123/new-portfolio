@@ -1,11 +1,11 @@
-// // toggie icon navbar
-// let menuIcon = document.querySelector('#menu-icon');
-// let navbar = document.querySelector('.navbar');
+// toggie icon navbar
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
 
-// menuIcon.onclick = () => {
-//   menuIcon.classList.toggle('bx-x');
-//   navbar.classList.toggle('active');
-// };
+menuIcon.onclick = () => {
+  menuIcon.classList.toggle('bx-x');
+  navbar.classList.toggle('active');
+};
 // // scroll sections avtive link
 // let sections = document.querySelectorAll('section');
 // let navLinks = document.querySelectorAll('header nav a');
