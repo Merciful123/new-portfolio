@@ -6,6 +6,60 @@ menuIcon.onclick = () => {
   menuIcon.classList.toggle('bx-x');
   navbar.classList.toggle('active');
 };
+
+
+// asteroid code start
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const meteorContainer = document.querySelector(".home-content-main");
+
+  function createMeteor() {
+    const meteor = document.createElement("span");
+    meteor.classList.add("meteor");
+
+    meteor.style.top = `${Math.random() * 100}%`;
+    meteor.style.left = `${Math.random() * 100}%`;
+    meteor.style.animationDuration = `${Math.random() * 2 + 1}s`;
+
+    meteorContainer.appendChild(meteor);
+
+    setTimeout(() => {
+      meteor.remove();
+    }, 2000);
+  }
+
+  setInterval(createMeteor, 300);
+});
+
+
+
+// asteroid code end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// custom scroll animations code
+
+
+
 // // scroll sections avtive link
 // let sections = document.querySelectorAll('section');
 // let navLinks = document.querySelectorAll('header nav a');

@@ -101,12 +101,20 @@ section {
     width: 100%;
     flex-wrap: nowrap;
     justify-content: space-around;
-    /* gap: 60px; */
-    margin-bottom: 20px;  
+    gap: 60px;
+    margin-bottom: 3rem;  
+    margin-top: 3rem;  
+    background-color: var(--second-bg-color);
+    padding: 4rem 2rem;
+    border-radius: 1rem;
  }
 
- .home-content{
-    width: 40%;
+ .home-content, .home-img{
+    flex-basis: 50%;
+ }
+
+ .home-img > img{
+    width: fit-content;
  }
 
 .home-content h3 {
@@ -115,7 +123,7 @@ section {
 }
 
 .home-content h3:nth-of-type(2) {
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
 }
 
 span {
@@ -174,19 +182,27 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 4rem;
     background: var(--second-bg-color);
     border-radius: 1rem;
 }
 
 .about-img img {
-    width: 35vw;
-    border-radius: 40% 40%;
+    width: 100%;
+    border-radius: 2rem;
 }
 
 .heading {
     text-align: center;
     font-size: 4.5rem;
+}
+
+.about-content{
+    flex-basis: 50%;
+}
+
+.about-img{
+    flex-basis: 50%;
 }
 
 .about-content h2 {
@@ -249,6 +265,7 @@ span {
 
 .portfolio{
     background: var(--second-bg-color);
+    border-radius: 1rem;
 }
 
 .portfolio h2{
@@ -444,9 +461,12 @@ section{
     #menu-icon{
         display: block;
     }
-    #home-content{
-        /* display: ; */
-        /* flex-direction: column; */
+    #home-content, .home-img{
+        flex-basis: 50% !important;
+    }
+
+    .home-img > img{
+        width: 100%;
     }
 
     .home-content-main{
@@ -490,7 +510,7 @@ section{
     }
 
     .home-img img {
-        width: 70vw;
+        /* width: 70vw; */
         margin-top: 4rem;
 
     }
@@ -500,7 +520,7 @@ section{
     }
 
     .about img{
-        width: 70vw;
+        width: 100%;
         margin-top: 4rem;
     }  
 
@@ -529,7 +549,7 @@ section{
     }
 
     .about-img img{
-        width: 95vw;
+        width: 100%;
     }
 
     .about{
@@ -546,16 +566,13 @@ section{
 }
 
 @media (max-width:365px){
-    .home-img img{
-        width: 90vw;
-    }
 
     .about-img img{
-        width: 95vw;
+        width: 100%;
     }
 
     .about{
-        width: 95vw;
+        /* width: 95vw; */
     }
 
     .home-content{
@@ -587,3 +604,31 @@ nav a:hover{
 }
 
 /*  */
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+
+.meteor {
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background: linear-gradient(90deg, #0d51af, transparent);
+    border-radius: 2px;
+    transform: rotate(215deg);
+    animation: meteor-fall linear infinite;
+}
+
+@keyframes meteor-fall {
+    from {
+        transform: translateY(-200px) translateX(0px) rotate(215deg);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(200px) translateX(-200px) rotate(215deg);
+        opacity: 0;
+    }
+}
