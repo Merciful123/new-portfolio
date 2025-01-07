@@ -103,11 +103,11 @@ document.addEventListener("DOMContentLoaded", function () {
 //  ScrollReveal().reveal('.home-content h1,.about-img', {origi:'left' });
 //  ScrollReveal().reveal('.home-content p,.about-content', {origi:'right' });
 
-// //  typed js
-// const typed = new Typed('.multiple-text',{
-//     strings:['Fronted Developer','React Js Developer', "Javascript Developer", "UI/UX Developer"],
-//     typeSpeed:100,
-//     backSpeed:100,
-//     backDelay:1000,
-//     loop:true
-// })
+//  typed js
+const typed = new Typed('.multiple-text',{
+    strings:['Fronted Developer','React Js Developer', "Javascript Developer", "UI/UX Developer"],
+    typeSpeed:100,
+    backSpeed:100,
+    backDelay:1000,
+    loop:true
+})
