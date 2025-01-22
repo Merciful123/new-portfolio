@@ -622,8 +622,8 @@ nav a:hover{
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 
-
-.meteor {
+@media screen and (min-width: 768px) {
+    .meteor {
     position: absolute;
     width: 50px;
     height: 4px;
@@ -632,6 +632,9 @@ nav a:hover{
     transform: rotate(215deg);
     animation: meteor-fall linear infinite;
 }
+
+}
+
 
 @keyframes meteor-fall {
     from {
