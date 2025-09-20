@@ -398,17 +398,17 @@ span {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 2rem 9%;
+    padding: 20px 10px;
     background: var(--second-bg-color);
 }
 
 .footer-text p{
     font-size: 1.6rem;
-    text-align: center;
+    /* text-align: center; */
 }
 
-.footer-text{
-    /* text-align: center; */
+.footer-text {
+    align-self: center;
 }
 
 .footer-iconTop a{
@@ -431,6 +431,95 @@ span {
     color: var(--second-bg-color);
 }
 
+
+/* Footer */
+
+ /* Footer Styles */
+        .footer {
+            background: var(--second-bg-color, #252834);
+            padding: 2rem 9%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            margin-top: auto;
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .footer-text {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            flex: 1;
+        }
+        
+        .footer-text p {
+            font-size: 1.6rem;
+            color: #fff;
+            margin: 0;
+        }
+        
+        .footer-iconTop {
+            margin-left: auto;
+        }
+        
+        .footer-iconTop a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: .8rem;
+            background: var(--main-color, #0ef);
+            border-radius: .8rem;
+            transition: .5s ease;
+        }
+        
+        .footer-iconTop a:hover {
+            box-shadow: 0 0 1rem var(--main-color, #0ef);
+            transform: translateY(-5px);
+        }
+        
+        .footer-iconTop a i {
+            font-size: 2.4rem;
+            color: var(--second-bg-color, #252834);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .footer {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+                padding: 2rem;
+            }
+            
+            .footer-text {
+                position: static;
+                transform: none;
+                order: 2;
+            }
+            
+            .footer-iconTop {
+                margin-left: 0;
+                order: 1;
+            }
+        }
+        
+        @media (max-width: 450px) {
+            .footer-text p {
+                font-size: 1.4rem;
+            }
+            
+            .footer-iconTop a {
+                padding: 0.6rem;
+            }
+            
+            .footer-iconTop a i {
+                font-size: 2rem;
+            }
+        }
+
+/* Footer */
 
 /* BREAKPOINTS */
 
@@ -621,7 +710,7 @@ nav a:hover{
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-
+/* 
 @media screen and (min-width: 768px) {
     .meteor {
     position: absolute;
@@ -644,5 +733,49 @@ nav a:hover{
     to {
         transform: translateY(200px) translateX(-200px) rotate(215deg);
         opacity: 0;
+    }
+} */
+
+
+
+/* Remove the media query and make this available for all devices */
+.meteor {
+    position: absolute;
+    width: 30px; /* Slightly smaller for mobile */
+    height: 3px;
+    background: linear-gradient(90deg, #fdfeff, transparent);
+    border-radius: 2px;
+    transform: rotate(215deg);
+    animation: meteor-fall linear infinite;
+    z-index: 1;
+}
+
+@keyframes meteor-fall {
+    from {
+        transform: translateY(-200px) translateX(0px) rotate(215deg);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(200px) translateX(-200px) rotate(215deg);
+        opacity: 0;
+    }
+}
+
+/* Add mobile-specific adjustments */
+@media (max-width: 767px) {
+    .meteor {
+        width: 20px; /* Even smaller for very small screens */
+        height: 2px;
+    }
+    
+    @keyframes meteor-fall {
+        from {
+            transform: translateY(-150px) translateX(0px) rotate(215deg);
+            opacity: 1;
+        }
+        to {
+            transform: translateY(150px) translateX(-150px) rotate(215deg);
+            opacity: 0;
+        }
     }
 }

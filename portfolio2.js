@@ -1,64 +1,67 @@
 // toggie icon navbar
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+let menuIcon = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".navbar");
 
 menuIcon.onclick = () => {
-  menuIcon.classList.toggle('bx-x');
-  navbar.classList.toggle('active');
+  menuIcon.classList.toggle("bx-x");
+  navbar.classList.toggle("active");
 };
-
 
 // asteroid code start
 
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
-  const meteorContainer = document.querySelector(".home-content-main");
+    const meteorContainer = document.querySelector(".home-content-main");
+    let meteorInterval;
 
-  function createMeteor() {
-    const meteor = document.createElement("span");
-    meteor.classList.add("meteor");
+    function createMeteor() {
+        const meteor = document.createElement("span");
+        meteor.classList.add("meteor");
 
-    meteor.style.top = `${Math.random() * 100}%`;
-    meteor.style.left = `${Math.random() * 100}%`;
-    meteor.style.animationDuration = `${Math.random() * 2 + 1}s`;
+        // Adjust positioning based on screen size
+        const topPosition = Math.random() * 100;
+        const leftPosition = Math.random() * 100;
+        
+        meteor.style.top = `${topPosition}%`;
+        meteor.style.left = `${leftPosition}%`;
+        
+        // Adjust animation speed based on device
+        const duration = window.innerWidth < 768 ? 
+            `${Math.random() * 1.5 + 0.5}s` : 
+            `${Math.random() * 2 + 1}s`;
+            
+        meteor.style.animationDuration = duration;
 
-    meteorContainer.appendChild(meteor);
+        meteorContainer.appendChild(meteor);
 
-    setTimeout(() => {
-      meteor.remove();
-    }, 2000);
-  }
+        setTimeout(() => {
+            meteor.remove();
+        }, 2000);
+    }
 
-  setInterval(createMeteor, 300);
+    // Adjust meteor frequency based on device
+    function startMeteors() {
+        const frequency = window.innerWidth < 768 ? 500 : 300;
+        
+        if (meteorInterval) {
+            clearInterval(meteorInterval);
+        }
+        
+        meteorInterval = setInterval(createMeteor, frequency);
+    }
+
+    // Start meteors
+    startMeteors();
+    
+    // Adjust on window resize
+    window.addEventListener('resize', startMeteors);
 });
-
-
 
 // asteroid code end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // custom scroll animations code
-
-
 
 // // scroll sections avtive link
 // let sections = document.querySelectorAll('section');
@@ -95,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //     // reset: true,
 //     distance:'80px',
 //     duration:2000,
-//     delay:200 
+//     delay:200
 //  });
 
 // //  ScrollReveal().reveal('.home-content,.heading', {origi:'top' });
@@ -104,10 +107,15 @@ document.addEventListener("DOMContentLoaded", function () {
 //  ScrollReveal().reveal('.home-content p,.about-content', {origi:'right' });
 
 //  typed js
-const typed = new Typed('.multiple-text',{
-    strings:['Fronted Developer','React Js Developer', "Javascript Developer", "UI/UX Developer"],
-    typeSpeed:100,
-    backSpeed:100,
-    backDelay:1000,
-    loop:true
-})
+const typed = new Typed(".multiple-text", {
+  strings: [
+    "Fronted Developer",
+    "React Js Developer",
+    "Javascript Developer",
+    "UI/UX Developer",
+  ],
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true,
+});
